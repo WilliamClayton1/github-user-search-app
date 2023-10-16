@@ -1,0 +1,67 @@
+@import "resets.css";
+@import "layout.css";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --space-mono: Space Mono, 'sans-serif';
+    --light-primary: #F6F8FF;
+    --light-secondary: #FEFEFE;
+    --light-words: #4B6A9B;
+    --light-words2: #2B3442;
+    --light-words3: #697C9A;
+    --dark-primary: #141D2F;
+    --dark-option-hover: #90A4D4;
+    --dark-secondary: #1E2A47;
+    --buttons: #0079FF;
+    --buttons-hover: #60ABFF;
+}
+
+.page-wrapper {
+    background-color: var(--light-primary);
+    font-family: var(--space-mono);
+}
+
+.container {
+    min-width: 730px;
+}
+
+/* header css */
+#light-mode, #sun {
+    display: none;
+}
+
+#dark-mode {
+    color: var(--light-words3);
+}
+
+#dark-mode:hover, #moon:hover {
+    color: #222731;
+    fill: #222731;
+}
+
+.icon-container {
+    cursor: pointer;
+    gap: 16px;
+}
+
+.icon {
+    height: 20px;
+}
+
+/* search css */
+input {
+    width: 100%;
+    min-height: 69px;
+    border: none;
+    border-radius: 15px;
+    background: var(--light-secondary);
+    color: #222731;
+    font-family: var(--space-mono);
+    font-size: 18px;
+    line-height: 25px;
+    padding-left: 80px;
+    position: relative;
+}
+
+
+
