@@ -16,6 +16,10 @@
     --buttons-hover: #60ABFF;
 }
 
+button {
+    cursor: pointer;
+}
+
 .page-wrapper {
     background-color: var(--light-primary);
     font-family: var(--space-mono);
@@ -30,13 +34,13 @@
     display: none;
 }
 
-#dark-mode {
+#dark-mode, #dark-mode + svg {
     color: var(--light-words3);
+    transition: all ease .3s;
 }
 
-#dark-mode:hover, #moon:hover {
+#modes:hover #dark-mode, #modes:hover #moon {
     color: #222731;
-    fill: #222731;
 }
 
 .icon-container {
@@ -49,18 +53,88 @@
 }
 
 /* search css */
+#form {
+    margin-top: 36px;
+    position: relative;
+}
+
 input {
     width: 100%;
     min-height: 69px;
     border: none;
     border-radius: 15px;
     background: var(--light-secondary);
-    color: #222731;
+    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.20);
+    color: #000;
     font-family: var(--space-mono);
     font-size: 18px;
+    font-weight: 400;
     line-height: 25px;
     padding-left: 80px;
-    position: relative;
+    padding-right: 100px;
+    position:relative;
+}
+
+input::placeholder {
+    font-family: var(--space-mono);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--light-words);
+}
+
+input[type="search"] {
+    background-image: url("../assets/icon-search.svg");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: 32px 23px;
+}
+
+#submit-btn {
+    background: var(--buttons);
+    color: #FFFFFF;
+    font-family: var(--space-mono);
+    font-weight: 700;
+    font-size: 16px;
+    width: 106px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+#search-icon {
+    position: absolute;
+    top: 23px;
+    left: 32px;
+}
+
+/* main content css */
+#main-container {
+    margin-top: 24px;
+    min-width: 730px;
+    min-height: 419px;
+    border-radius: 15px;
+    background: var(--light-secondary);
+    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.20);
+}
+
+#profile-container {
+    align-self: end;
+
+}
+
+#profile-data {
+
+    min-width: 480px;
+    min-height: 85px;
+    border-radius: 10px;
+    background-color: var(--light-primary);
+    color: var(--light-words);
+    font-size: 13px;
+    padding-top: 15px;
+    padding-left: 32px;
+    gap: 82px;
 }
 
 
