@@ -79,6 +79,7 @@ input::placeholder {
     font-family: var(--space-mono);
     font-size: 18px;
     font-weight: 400;
+    line-height: 25px;
     color: var(--light-words);
 }
 
@@ -112,31 +113,100 @@ input[type="search"] {
 /* main content css */
 #main-container {
     margin-top: 24px;
-    min-width: 730px;
-    min-height: 419px;
+    width: 730px;
+    height: 419px;
+    gap: 37px;
     border-radius: 15px;
     background: var(--light-secondary);
     box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.20);
 }
 
-#profile-container {
-    align-self: end;
-
+#profile-picture {
+    margin-top: 48px;
+    margin-left: 48px;
 }
 
-#profile-data {
-   align-self: end;
-    margin-right: 48px;
-    min-width: 480px;
-    min-height: 85px;
-    border-radius: 10px;
-    background-color: var(--light-primary);
+#profile-details {
+    margin-top: 44px;
+}
+
+#profile-header {
+    gap: 138px
+}
+
+#profile-title {
+    color: var(--light-words2);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#profile-date {
+    color: var(--light-words3);
+    font-size: 15px;
+    text-align: right;
+}
+
+#profile-username {
+    color: var(--buttons);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#profile-bio {
+    margin-top: 20px;
     color: var(--light-words);
+    opacity: 0.75;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+#addition-data {
+    margin-top: 32px;
     font-size: 13px;
+    font-weight: 400;
+    color: var(--light-words);
+}
+
+#table {
+    height: 85px;
     padding-top: 15px;
     padding-left: 32px;
-    gap: 82px;
+    background: var(--light-primary);
+    border-radius: 10px;
 }
 
+#repos {
+    width: 139px;
+}
 
+#followers {
+    width: 153px;
+}
+
+.numbers {
+    color: var(--light-words2);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#links-container {
+    margin-top: 37px;
+}
+
+.links {
+    gap: 21px;
+}
+
+.link {
+    gap: 16px;
+}
+
+#location{}
+
+#github-link{}
+
+#twitter{}
+
+#company{}
 
