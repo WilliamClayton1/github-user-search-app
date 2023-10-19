@@ -131,7 +131,9 @@ input[type="search"] {
 }
 
 #profile-header {
-    gap: 138px
+    /*gap: 138px*/
+    width: 100%;
+    justify-content: space-between;
 }
 
 #profile-title {
@@ -144,6 +146,7 @@ input[type="search"] {
     color: var(--light-words3);
     font-size: 15px;
     text-align: right;
+    /*justify-self: end;*/
 }
 
 #profile-username {
@@ -192,6 +195,9 @@ input[type="search"] {
 
 #links-container {
     margin-top: 37px;
+    gap: 120px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .links {
@@ -202,11 +208,12 @@ input[type="search"] {
     gap: 16px;
 }
 
-#location{}
+#location-svg, #github-link-svg, #twitter-svg, #company-svg {
+    color: var(--light-words);
+    opacity: 0.55;
+}
 
-#github-link{}
-
-#twitter{}
-
-#company{}
-
+#location-unavailable, #github-link-unavailable, #twitter-unavailable, #company-unavailable {
+    color: var(--light-words);
+    opacity: 0.45;
+}
