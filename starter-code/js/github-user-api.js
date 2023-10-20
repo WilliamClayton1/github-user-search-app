@@ -14,13 +14,11 @@ const pullUsersFromApi = async (input) => {
     return await response.json()
 }
 
-const userSearched = async () => {
-    const search = document.querySelector('#search');
-    let userInput = search.value;
+// const usernameSearched = async () => {
+//     const search = document.querySelector('#search');
+//     let userInput = search.value;
+//     let gitHubUser = await pullUsersFromApi(userInput);
+//     return gitHubUser.login;
+// }
 
-    let gitHubUser = await pullUsersFromApi(userInput);
-
-    console.log(gitHubUser);
-}
-
-export {pullUsersFromApi, userSearched}
+export {pullUsersFromApi}
