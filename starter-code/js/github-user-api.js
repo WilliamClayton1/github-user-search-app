@@ -33,6 +33,13 @@ const usernameSearched = async () => {
     const profileBio = document.querySelector('#profile-bio');
     const profileLink = document.querySelector('#profile-username');
     const profileDate = document.querySelector('#date');
+    const repoCount = document.querySelector('#repo');
+    const followerCount = document.querySelector('#follower');
+    const followingCount = document.querySelector('#follow');
+    const location = document.querySelector('#location-unavailable');
+    const locationIcon = document.querySelector('#location-svg');
+    const githubLink = document.querySelector('#github-link-unavailable');
+    const githubIcon = document.querySelector('#github-link-svg');
     let userInput = search.value;
     let gitHubUser = await pullUsersFromApi(userInput);
 
@@ -62,11 +69,34 @@ const usernameSearched = async () => {
     profileLink.innerHTML = "@" + gitHubUser.login.toLowerCase();
 
     //display date
-
     profileDate.innerHTML = dateConversion(gitHubUser.created_at);
 
+    //displaying repo, followers, following count
+    repoCount.innerHTML = gitHubUser.public_repos;
+    followerCount.innerHTML = gitHubUser.followers;
+    followingCount.innerHTML = gitHubUser.following;
 
+    //displaying location
+    if (gitHubUser.location != null) {
+        location.innerHTML = gitHubUser.location;
+        location.style.opacity = '100%';
+        locationIcon.style.opacity = '100%';
+    } else {
+        location.innerHTML = 'Not Available'
+        location.style.opacity = '45%';
+        locationIcon.style.opacity = '55%';
+    }
 
+    //display github link
+    if (gitHubUser.html_url != null) {
+        githubLink.innerHTML = gitHubUser.html_url;
+        githubLink.style.opacity = '100%';
+        githubIcon.style.opacity = '100%';
+    } else {
+        githubLink.innerHTML = 'Not Available'
+        githubLink.style.opacity = '45%';
+        githubIcon.style.opacity = '55%';
+    }
 
 
 
