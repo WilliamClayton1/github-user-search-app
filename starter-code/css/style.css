@@ -114,7 +114,9 @@ input[type="search"] {
 #main-container {
     margin-top: 24px;
     width: 730px;
-    height: 419px;
+    min-height: 419px;
+    /*height: 419px;*/
+    padding-bottom: 48px;
     gap: 37px;
     border-radius: 15px;
     background: var(--light-secondary);
@@ -140,6 +142,7 @@ input[type="search"] {
     color: var(--light-words2);
     font-size: 26px;
     font-weight: 700;
+    max-width: 300px;
 }
 
 #profile-date {
@@ -161,6 +164,7 @@ input[type="search"] {
     opacity: 0.75;
     line-height: 25px;
     font-weight: 400;
+    max-width: 480px;
 }
 
 #addition-data {
