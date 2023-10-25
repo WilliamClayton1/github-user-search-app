@@ -131,6 +131,7 @@ input[type="search"] {
 
 #profile-details {
     margin-top: 44px;
+    width: 480px;
 }
 
 #profile-header {
@@ -199,7 +200,7 @@ input[type="search"] {
 }
 
 #links-container {
-    margin-top: 37px;
+    margin-top: 34px;
     gap: 120px;
     font-size: 15px;
     font-weight: 400;
@@ -222,3 +223,4 @@ input[type="search"] {
     color: var(--light-words);
     opacity: 0.45;
 }
+
