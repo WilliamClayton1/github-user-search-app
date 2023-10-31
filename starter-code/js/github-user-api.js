@@ -40,6 +40,11 @@ const usernameSearched = async () => {
     const locationIcon = document.querySelector('#location-svg');
     const githubLink = document.querySelector('#github-link-unavailable');
     const githubIcon = document.querySelector('#github-link-svg');
+    const twitterLink = document.querySelector("#twitter-unavailable");
+    const twitterIcon = document.querySelector("#twitter-svg");
+    const companyLink = document.querySelector("#company-unavailable");
+    const companyIcon = document.querySelector("#company-svg");
+
     let userInput = search.value;
     let gitHubUser = await pullUsersFromApi(userInput);
 
@@ -87,15 +92,37 @@ const usernameSearched = async () => {
         locationIcon.style.opacity = '55%';
     }
 
-    //display github link
-    if (gitHubUser.html_url != null) {
-        githubLink.innerHTML = gitHubUser.html_url;
+    //display blog link
+    if (gitHubUser.blog !== "") {
+        githubLink.innerHTML = gitHubUser.blog;
         githubLink.style.opacity = '100%';
         githubIcon.style.opacity = '100%';
     } else {
         githubLink.innerHTML = 'Not Available'
         githubLink.style.opacity = '45%';
         githubIcon.style.opacity = '55%';
+    }
+
+    //display twitter link
+    if (gitHubUser.twitter_username != null) {
+        twitterLink.innerHTML = gitHubUser.twitter_username;
+        twitterLink.style.opacity = '100%';
+        twitterIcon.style.opacity = '100%';
+    } else {
+        twitterLink.innerHTML = 'Not Available'
+        twitterLink.style.opacity = '45%';
+        twitterIcon.style.opacity = '55%';
+    }
+
+    //display company link
+    if (gitHubUser.company != null) {
+        companyLink.innerHTML = gitHubUser.company;
+        companyLink.style.opacity = '100%';
+        companyIcon.style.opacity = '100%';
+    } else {
+        companyLink.innerHTML = 'Not Available'
+        companyLink.style.opacity = '45%';
+        companyIcon.style.opacity = '55%';
     }
 
 

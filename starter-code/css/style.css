@@ -201,9 +201,12 @@ input[type="search"] {
 
 #links-container {
     margin-top: 34px;
-    gap: 120px;
     font-size: 15px;
     font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 51px;
+
 }
 
 .links {
@@ -217,10 +220,13 @@ input[type="search"] {
 #location-svg, #github-link-svg, #twitter-svg, #company-svg {
     color: var(--light-words);
     opacity: 0.55;
+    justify-content: center;
+    align-items: center;
 }
 
 #location-unavailable, #github-link-unavailable, #twitter-unavailable, #company-unavailable {
     color: var(--light-words);
     opacity: 0.45;
+    max-width: 200px;
 }
 
